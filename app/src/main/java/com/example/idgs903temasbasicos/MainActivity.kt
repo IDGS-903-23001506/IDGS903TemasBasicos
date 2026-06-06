@@ -7,8 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.idgs903temasbasicos.Ejemplo1.OperasBasActivity
-import com.example.idgs903temasbasicos.Ejemplo2.SaludoActivity
+import com.example.idgs903temasbasicos.Practica1.Practica1Activity
+import com.example.idgs903temasbasicos.Practica2.Practica2Activity
+import com.example.idgs903temasbasicos.Practica3.Practica3Activity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,11 +17,13 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val btnOperasBas=findViewById<Button>(R.id.btn1)
-        val btnSaludo = findViewById<Button>(R.id.btn2)
+        val btnPractica1 = findViewById<Button>(R.id.btn1)
+        val btnPractica2 = findViewById<Button>(R.id.btn2)
+        val btnPractica3 = findViewById<Button>(R.id.btn3)
 
-        btnOperasBas.setOnClickListener { navigateToOperasBas() }
-        btnSaludo.setOnClickListener { navigateToSaludo() }
+        btnPractica1.setOnClickListener { navigateToPractica1() }
+        btnPractica2.setOnClickListener { navigateToPractica2() }
+        btnPractica3.setOnClickListener { navigateToPractica3() }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -28,16 +31,16 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
-    fun navigateToOperasBas(){
-        val intent = Intent(this, OperasBasActivity::class.java)
-        startActivity(
-            intent
-        )
+
+    private fun navigateToPractica1() {
+        startActivity(Intent(this, Practica1Activity::class.java))
     }
-    fun navigateToSaludo(){
-        val intent = Intent(this, SaludoActivity::class.java)
-        startActivity(
-            intent
-        )
+
+    private fun navigateToPractica2() {
+        startActivity(Intent(this, Practica2Activity::class.java))
+    }
+
+    private fun navigateToPractica3() {
+        startActivity(Intent(this, Practica3Activity::class.java))
     }
 }

@@ -12,13 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IDGS903TemasBasicos">
         <activity
-            android:name=".Ejemplo2.SaludoActivity"
+            android:name=".Practica2.ResultadoPractica2Activity"
             android:exported="false" />
         <activity
-            android:name=".Ejemplo2.Resultadoactivity"
+            android:name=".Practica3.ResultadoPractica3Activity"
             android:exported="false" />
         <activity
-            android:name=".Ejemplo1.OperasBasActivity"
+            android:name=".Practica3.Practica3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Practica2.Practica2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Practica1.Practica1Activity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

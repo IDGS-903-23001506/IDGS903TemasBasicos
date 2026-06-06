@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "IDGS903TemasBasicos"
+rootProject.name = "IDGS903PracticaSegundoParcial"
 include(":app")
